@@ -110,12 +110,16 @@ function showHideCheckboxToggledContent() {
       reader.onload = function (e) {
         
         if (idType == "photo") {
+          $("#scan-photo-preview").css("display", "block");
           $('#uploaded-photo').attr('src', e.target.result);
           $('#photo-review').attr('src', e.target.result);
+          
         }
         if (idType == "id") {
+          $("#scan-id-preview").css("display", "block");
           $('#uploaded-id').attr('src', e.target.result);
           $('#id-review').attr('src', e.target.result);
+          
         }
       }
   
@@ -143,6 +147,7 @@ function showHideCheckboxToggledContent() {
     }
     $("#scan-id-1").css("display","none");
     $("#scan-id-2").css("display","block");
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
   });
   
   $("#scan-photo-button").on("click", function(e) {
@@ -152,6 +157,7 @@ function showHideCheckboxToggledContent() {
     }
     $("#scan-id-2").css("display","none");
     $("#scan-id-3").css("display","block");
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
   });
   
   $(document).ready(function() {

@@ -12,71 +12,72 @@
 	<div class="grid-row">
 		<div class="column-two-thirds">
 			<div class="inner-block">
-				
-					<div id="scan-id-1">
-						<form>
+				<div id="scan-id-1">
+					<h1 class="heading-large">Photograph your document</h1>
+					<form>
 						<div class="form-group">
-                    		<label for="id-document" class="camera-button">Take a photo of your ID
+                    		<label for="id-document" class="camera-button">Take a photo of your document
 							<input type="file" id="id-document" accept="image/*" capture="camera" >
 							</label>
 						</div>
 
-						<div class="form-group">
-							<label>Preview</label>
-							<img id="uploaded-id" src="#" alt="your image" style="width:90%;height:auto;"/>
+						<div id="scan-id-preview" style="display:none">
+							<h2 class="heading-small">Document Preview</h2>
+							<img id="uploaded-id" src="#" alt="your image" style="width:100%;height:auto;"/>
 						</div>
 
 						<div class="form-group">
 							<a id="scan-id-button" href="#" class="button" disabled="disabled">Continue</a>
 						</div>
-						</form>
-					</div>
+					</form>
+				</div>
 
-					<div id="scan-id-2" style="display:none"> 
-						<form>
-							<div class="form-group">
-								<label for="photo-document" class="camera-button">Take a photo of your yourself
-								<input type="file" id="photo-document" accept="image/*" capture="camera" >
-								</label>
-							</div>
+				<div id="scan-id-2" style="display:none"> 
+					<h1 class="heading-large">Take a selfie</h1>
+					<form>
+						<div class="form-group">
+							<label for="photo-document" class="camera-button">Take a selfie
+							<input type="file" id="photo-document" accept="image/*" capture="camera" >
+							</label>
+						</div>
 							
-							<div class="form-group">
-								<label>Preview</label>
-								<img id="uploaded-photo" src="#" alt="your image" style="width:90%;height:auto;"/>
-							</div>
+						<div id="scan-photo-preview"  style="display:none">
+							<h2 class="heading-small">Selfie Preview</h2>
+							<img id="uploaded-photo" src="#" alt="your image" style="width:100%;height:auto;"/>
+						</div>
 	
-							<div class="form-group">
-								<a id="scan-photo-button" href="#" class="button" disabled="disabled">Continue</a>
-							</div>
-						</form>
-					</div>
+						<div class="form-group">
+							<a id="scan-photo-button" href="#" class="button" disabled="disabled">Continue</a>
+						</div>
+					</form>
+				</div>
 
-						<div id="scan-id-3" style="display:none">
-								<p>Please check if:</p>
-								
-													<ul class="list list-bullet">
-														<li>The photo is clear</li>
-														<li>There are no reflections</li>
-														<li>All details are visible</li>
-													</ul>
+				<div id="scan-id-3" style="display:none">
+						<h1 class="heading-large">Review your document and selfie</h1>
+						<p>Please check:</p>
+					<ul class="list list-bullet">
+						<li>The photos is clear</li>
+						<li>There are no reflections</li>
+						<li>All details are visible</li>
+					</ul>
+					
+					<div class="form-group">
+						<h2 class="heading-small">Your document preview</p>
+						<img id="id-review" src="#" alt="your image" style="width:90%;height:auto;" />
+						<h2 class="heading-small">Your selfie preview</p>
+						<img id="photo-review" src="#" alt="your image" style="width:90%;height:auto;" />
+					</div>
+					
 													
-													<img id="id-review" src="#" alt="your image" style="width:90%;height:auto;" />
-													<img id="photo-review" src="#" alt="your image" style="width:90%;height:auto;" />
-														<!-- <img src="/public/images/photo-id.png"  style="width: 100%;" alt=""> -->
-													
-													<div class="form-group">
-														<a href="scan-id-uploading" class="button">Confirm</a>
-														<a href="scan-id" class="button">Retake</a>
-													</div>
-							</div>
+					<div class="form-group">
+						<a href="scan-id-uploading" class="button">Confirm</a>
+						<a href="scan-id" >Retake</a>
+					</div>
+				</div>
 			</div>
 		</div>
-
 	</div>
-
 </main>
-
-
 
 {% endblock %}
 
